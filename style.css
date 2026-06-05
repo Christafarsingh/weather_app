@@ -1,0 +1,116 @@
+/* style.css - Weather App styling */
+/*
+  Design: Clean, responsive, glassmorphism style.
+  Colors: Soft dark background with gradient accent.
+  Typography: Google Font 'Outfit' for modern look.
+*/
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0f0f0;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#city-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+#city-input::placeholder {
+  color: #ddd;
+}
+
+#search-btn {
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#search-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.loading {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.weather-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-card img {
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem 0;
+}
+
+.weather-card p {
+  margin: 0.3rem 0;
+  font-weight: 300;
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+  #city-input, #search-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
